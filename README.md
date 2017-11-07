@@ -58,7 +58,7 @@ d. Whether or not the backgroundColor of the tableViewCells should alternate bet
 
 ![](https://media.giphy.com/media/26u4ehO091lp0J1QI/giphy.gif)
 
-The opposite background color of the alternationg cells is gotten by creating an RGB color from one subract the slider values
+The opposite background color of the alternationg cells is gotten by creating an RGB color from one subract the slider values .  e.g. if the red slider value is 0.85 then the oppsite red value will be 1 - 0.85 = 0.15.
 
 
 ### Step 4
