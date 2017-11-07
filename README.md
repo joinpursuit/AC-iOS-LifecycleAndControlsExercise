@@ -26,17 +26,19 @@ Create outlets and actions for the controls and get them working and updating th
 ### Step 3 
 
 Create a Settings class with static variables to hold all the settings options values. You need to be able to store...
+
 a. The maximum number or rows in the tableview
+
 b. The case of the text, whether it be lowercase, uppercase or capitalized... maybe use an enum for this??
+
 c. The background color of the tableViewCell, this could be a tuple of RGB. You'll get thos values from the sliders.
+
 d. Whether or not the backgroundColor of the tableViewCells should alternate.
 
-e. In your SettingsViewController, hook up your controls to manipulate the Settings.
 
 #### Changing Rows
 
 ![](https://media.giphy.com/media/l2QDPPoG31zlaofWU/giphy.gif)
-
 
 
 #### Changing Case
@@ -54,3 +56,8 @@ e. In your SettingsViewController, hook up your controls to manipulate the Setti
 ![](https://media.giphy.com/media/26u4ehO091lp0J1QI/giphy.gif)
 
 
+### Step 4
+
+a. Update your Settings class from the SettingsViewController.
+
+b. Have your TableViewController check the Settings for how to configure the cells.
