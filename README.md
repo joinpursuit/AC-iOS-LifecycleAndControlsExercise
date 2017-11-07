@@ -16,3 +16,18 @@ Changing Rows
 ![](https://media.giphy.com/media/l2QDPPoG31zlaofWU/giphy.gif)
 
 
+Changing Case
+
+![](https://media.giphy.com/media/26u409FvcHo3Q78nC/giphy.gif)
+
+
+Changing Color
+
+![](https://media.giphy.com/media/l2QE06HoonGr93gYw/giphy.gif)
+
+
+Alternating Cells
+
+![](https://media.giphy.com/media/26u4ehO091lp0J1QI/giphy.gif)
+
+
