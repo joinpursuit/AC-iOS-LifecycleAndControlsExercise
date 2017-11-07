@@ -1,68 +1,24 @@
-# AC-iOS-LifecycleAndControlsExercise
+# SongsSearchBar
 
-## Love Songs, Lifecycle and Controls
+## Level 1
 
-### Step 1
+- Display **loveSongs** song in the tableview.
+- Use a subtitle cell to display the song name in the ```textLabel``` and the artist name in the ```detailTextLabel```.
+- Click on a tableview cell and segue to a detailview that displays the name of the song, the artist, and the default image.
 
-We're going to create a settings menu for our love songs tableview from yesterday. If you already created that tableview, move on to step 2, if not...
+## Level 2
 
-a. Fork and clone this repo.
+- Add a searchBar.
+- Allow the user to search based on the song name.
 
-b. Create a tableview and populate it with the static array loveSongs in Song
+## Level 3 
 
+- Create scope buttons called artist and title.
+- Allow the user to search based on artist and song depending on which scope button was selected.
 
-#### Love Songs TableView
+![](https://media.giphy.com/media/xUOxfkpNxGMCEwQi3u/giphy.gif)
 
-<img width="317" alt="screen shot 2017-11-07 at 10 51 18 am" src="https://user-images.githubusercontent.com/20875592/32502820-c35ae546-c3a9-11e7-8b5c-f8844c897641.png">
+## Level 4 
 
-
-### Step 2
-
-Create a SettingsViewcontroller and hook it up to its own ViewController class.
-Create outlets and actions for the controls and get them working and updating their corresponding labels.
-
-#### Settings Menu
-
-<img width="313" alt="screen shot 2017-11-07 at 10 51 03 am" src="https://user-images.githubusercontent.com/20875592/32502824-c5549b1c-c3a9-11e7-9973-b3d292c36949.png">
-
-
-### Step 3 
-
-Create a Settings class with static variables to hold all the settings options values. You need to be able to store...
-
-a. The maximum number or rows in the tableview
-
-b. The case of the text, whether it be lowercase, uppercase or capitalized... maybe use an enum for this??
-
-c. The background color of the tableViewCell, this could be a tuple of RGB. You'll get those values from the sliders.
-
-d. Whether or not the backgroundColor of the tableViewCells should alternate between odd and even rows.
-
-
-#### Changing Rows
-
-![](https://media.giphy.com/media/l2QDPPoG31zlaofWU/giphy.gif)
-
-
-#### Changing Case
-
-![](https://media.giphy.com/media/26u409FvcHo3Q78nC/giphy.gif)
-
-
-#### Changing Cell Background Color
-
-![](https://media.giphy.com/media/l2QE06HoonGr93gYw/giphy.gif)
-
-
-#### Alternating Cells
-
-![](https://media.giphy.com/media/26u4ehO091lp0J1QI/giphy.gif)
-
-The opposite background color of the alternationg cells is gotten by creating an RGB color from one subract the slider values .  e.g. if the red slider value is 0.85 then the oppsite red value will be 1 - 0.85 = 0.15.
-
-
-### Step 4
-
-a. Update your Settings class from the SettingsViewController.
-
-b. Have your TableViewController check the Settings for how to configure the cells.
+- Show a message in the tableview when there are no search results found.
+- Dismiss the keyboard when the search results return no search results. 
