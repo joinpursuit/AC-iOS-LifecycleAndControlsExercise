@@ -1,12 +1,15 @@
 # AC-iOS-LifecycleAndControlsExercise
 
-## Love Songs Lifecycle and Controls
+## Love Songs, Lifecycle and Controls
 
 ### Step 1
 
 We're going to create a settings menu for our love songs tableview from yesterday. If you already created that tableview, move on to step 2, if not...
+
 a. Fork and clone this repo.
+
 b. Create a tableview and populate it with the static array loveSongs in Song
+
 
 #### Love Songs TableView
 
@@ -31,9 +34,9 @@ a. The maximum number or rows in the tableview
 
 b. The case of the text, whether it be lowercase, uppercase or capitalized... maybe use an enum for this??
 
-c. The background color of the tableViewCell, this could be a tuple of RGB. You'll get thos values from the sliders.
+c. The background color of the tableViewCell, this could be a tuple of RGB. You'll get those values from the sliders.
 
-d. Whether or not the backgroundColor of the tableViewCells should alternate.
+d. Whether or not the backgroundColor of the tableViewCells should alternate between odd and even rows.
 
 
 #### Changing Rows
@@ -54,6 +57,8 @@ d. Whether or not the backgroundColor of the tableViewCells should alternate.
 #### Alternating Cells
 
 ![](https://media.giphy.com/media/26u4ehO091lp0J1QI/giphy.gif)
+
+The opposite background color of the alternationg cells is gotten by creating an RGB color from one subract the slider values
 
 
 ### Step 4
