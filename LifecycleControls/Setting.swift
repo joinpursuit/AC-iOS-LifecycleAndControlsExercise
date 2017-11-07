@@ -16,8 +16,8 @@ enum CapitalizationOption: Int {
 }
 
 class Settings {
-    static var shouldIncludeDetail = true
-    static var maxNumberOfRows = 50
+    static var alternatingCells = false
+    static var maxNumberOfRows = 10
     static var capitalization = CapitalizationOption.lower
-    static var cellColor: (red: CGFloat, green: CGFloat, blue: CGFloat) = (1,1,1)
+    static var cellColor: (red: CGFloat, green: CGFloat, blue: CGFloat) = (1, 1, 1)
 }

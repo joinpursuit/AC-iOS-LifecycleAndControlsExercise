@@ -11,6 +11,7 @@ import UIKit
 class SettingsViewController: UIViewController {
     
     
+    @IBOutlet weak var colorView: UIView!
     @IBOutlet weak var settingSwitch: UISwitch!
     @IBOutlet weak var settingStepper: UIStepper!
     @IBOutlet weak var settingSegment: UISegmentedControl!
@@ -30,7 +31,7 @@ class SettingsViewController: UIViewController {
     
     func setupViews() {
         self.settingStepper.value = Double(Settings.maxNumberOfRows)
-        self.stepperLabel.text = String(Double(Settings.maxNumberOfRows))
+        self.stepperLabel.text = String(Int(Settings.maxNumberOfRows))
         
         self.redSlider.value = Float(Settings.cellColor.red)
         redLabel.text = "Red: " + Settings.cellColor.red.description
@@ -41,8 +42,9 @@ class SettingsViewController: UIViewController {
         self.blueSlider.value = Float(Settings.cellColor.blue)
         blueLabel.text = "Green: " + Settings.cellColor.blue.description
         
-        self.settingSwitch.isOn = Settings.shouldIncludeDetail
+        self.settingSwitch.isOn = Settings.alternatingCells
         self.settingSegment.selectedSegmentIndex = Settings.capitalization.rawValue
+        self.colorView.backgroundColor = UIColor(displayP3Red: Settings.cellColor.red, green: Settings.cellColor.green, blue: Settings.cellColor.blue, alpha: 1.0)
     }
     
     @IBOutlet weak var stepperLabel: UILabel!
@@ -51,12 +53,12 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var blueLabel: UILabel!
     
     @IBAction func switchToggled(_ sender: UISwitch) {
-        Settings.shouldIncludeDetail = !Settings.shouldIncludeDetail
+        Settings.alternatingCells = !Settings.alternatingCells
     }
     
     @IBAction func stepperPressed(_ sender: UIStepper) {
         Settings.maxNumberOfRows = Int(sender.value)
-        stepperLabel.text = String(sender.value)
+        stepperLabel.text = String(Int(sender.value))
     }
     
     @IBAction func segmentedControlSwitched(_ sender: UISegmentedControl) {
@@ -86,6 +88,7 @@ class SettingsViewController: UIViewController {
         default:
             break
         }
+        self.colorView.backgroundColor = UIColor(displayP3Red: Settings.cellColor.red, green: Settings.cellColor.green, blue: Settings.cellColor.blue, alpha: 1.0)
     }
     
 }

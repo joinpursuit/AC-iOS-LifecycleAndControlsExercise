@@ -35,16 +35,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         switch Settings.capitalization {
         case .lower:
             cell.textLabel?.text = song.name.lowercased()
+            cell.detailTextLabel?.text = song.artist.lowercased()
         case .upper:
             cell.textLabel?.text = song.name.uppercased()
+            cell.detailTextLabel?.text = song.artist.uppercased()
         case .proper:
             //TO DO
-            cell.textLabel?.text = song.name.lowercased()
+            cell.textLabel?.text = song.name.capitalized
+            cell.detailTextLabel?.text = song.artist.capitalized
         }
         cell.backgroundColor = UIColor(displayP3Red: Settings.cellColor.red, green: Settings.cellColor.green, blue: Settings.cellColor.blue, alpha: 1.0)
-        if Settings.shouldIncludeDetail {
-            //TO DO (capitalization)
-            cell.detailTextLabel?.text = song.artist
+        if Settings.alternatingCells && indexPath.row % 2 == 0 {
+            cell.backgroundColor = UIColor(displayP3Red: 1 - Settings.cellColor.red, green: 1 - Settings.cellColor.green, blue: 1 - Settings.cellColor.blue, alpha: 1.0)
         }
         return cell
     }
